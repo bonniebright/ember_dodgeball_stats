@@ -1,11 +1,6 @@
-App = Ember.Application.create();
+window.Dodgeball = Ember.Application.create();
 
-App.Router.map(function() {
-  // put your routes here
+Dodgeball.ApplicationAdapter = DS.LSAdapter.extend({
+  namespace: 'dodgeball-emberjs'
 });
 
-App.IndexRoute = Ember.Route.extend({
-  model: function() {
-    return ['red', 'yellow', 'blue'];
-  }
-});
